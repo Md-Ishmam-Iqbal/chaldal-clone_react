@@ -1,3 +1,5 @@
+// Finish styling properly later
+
 import styled from '@emotion/styled'
 import { Home, Search } from '@mui/icons-material'
 import React from 'react'
@@ -85,6 +87,9 @@ const Location = styled.button`
     padding: 0 10px;
     cursor: pointer;
     background-color: inherit;
+    &:hover {
+        background-color: #eeb529
+    }
 `
 
 const SignIn = styled.button`
@@ -105,6 +110,12 @@ const SignIn = styled.button`
     text-align: center;
     justify-content: center;
     cursor: pointer;
+    &:hover {
+        background: #e04f54;
+    }
+    &:active {
+        background: #af3e42;
+    }
 `
 
 const Navbar = () => {
