@@ -7,7 +7,7 @@ import { AddShoppingCart } from '@mui/icons-material'
 const Product = ({ product }) => {
   return (
     <Card>
-        <CardMedia image='' title={product.name}/>
+        <CardMedia component="img" image={product.image} title={product.name} />
         <CardContent>
             <div>
                 <Typography variant="h5" gutterBottom>
