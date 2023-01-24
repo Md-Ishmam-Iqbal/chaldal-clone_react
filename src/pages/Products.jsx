@@ -1,13 +1,9 @@
 import React from 'react'
 import { Grid } from "@mui/material"
-import Product from './Product/Product'
+import Product from '../components/Products/Product/Product'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-// const products = [
-//     {id:1, name: "Shoes", description: "Running shoes.", price: "$5"},
-//     {id:2, name: "Macbook", description: "Apple products.", price: "$10"},
-// ]
 
 const Products = () => {
     const [loading, setLoading] = useState(false)
