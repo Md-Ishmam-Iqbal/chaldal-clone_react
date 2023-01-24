@@ -14,7 +14,6 @@ const Home = () => {
       <h2>Ad</h2>
       <h2>Ad</h2>
       <div>
-        <h6>Our Product Categories</h6>
         <Categories />
       </div>
       <div>

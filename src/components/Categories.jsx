@@ -1,7 +1,5 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { Grid } from "@mui/material"
-import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@mui/material'
 
 
 const Categories = () => {
@@ -19,35 +17,90 @@ const Categories = () => {
         .catch((e => console.log(e)))
     }, [])
 
-    const categoryIndex = (i) => {
-        while (i < categories.length) {
-            return (
-                <Grid xs={12} sm={6} md={4} lg={3}>
-                <Card>
-                    <CardContent>
-                        <div>
-                            <Typography variant="h5" gutterBottom>
-                                {categories[i]}
-                            </Typography>
-                        </div>
-                    </CardContent>
-                </Card>
-            </Grid>
-            );
-        }
-    }
+    // const categoryIndex = () => {
+    //     for (i = 0, i <= (categories.length), i++) {
+    //         return (
+    //             "<a>{categories[i]}/a>"
+    //         );
+    //     };
 
     
   return (
-    <section className='product-categories'>
-        <div className="intial-label">Our Product Categories</div>
-        <div className="mainTile">
-            <a href="http://">Meat and Fish</a>
-            <a href="http://">Cooking</a>
-            <a href="http://">Beverages</a>
-            <a href="http://">Home and Cleaning</a>
-        </div>
-    </section>
+    <div className="mainContainer">
+        <section className='product-categories'>
+            <div className="intialLabel">
+                <h2>
+                    <span></span>
+                    <span>
+                        Our Product Categories
+                    </span>
+                    <span></span>
+                </h2>
+            </div>
+            <div className="mainTile">
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[0]}
+                        </div>
+                        <div className="categoryImg">
+                            
+                        </div>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[1]}
+                        </div>
+                        <div className="categoryImg">
+
+                        </div>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[2]}
+                        </div>
+                        <div className="categoryImg">
+
+                        </div>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[3]}
+                        </div>
+                        <div className="categoryImg">
+
+                        </div>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[0]}
+                        </div>
+                        <div className="categoryImg">
+
+                        </div>
+                    </div>
+                </a>
+                <a href="http://">
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {categories[1]}
+                        </div>
+                        <div className="categoryImg">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
   )
 }
 
