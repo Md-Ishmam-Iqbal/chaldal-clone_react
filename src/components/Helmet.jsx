@@ -4,6 +4,7 @@
 import styled from '@emotion/styled'
 import { Home, Search } from '@mui/icons-material'
 import React from 'react'
+import Navbar from './Navbar'
 
 const Section = styled.section`
     background-color: #fdd670;
@@ -122,7 +123,7 @@ const SignIn = styled.button`
     }
 `
 
-const Head = () => {
+const Helmet = () => {
   return (
     <Section>
         <Container>
@@ -152,8 +153,9 @@ const Head = () => {
                 </Right>
             </Wrapper>
         </Container>
+        <Navbar />
     </Section>
   )
 }
 
-export default Head
+export default Helmet

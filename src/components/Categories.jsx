@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Categories = () => {
@@ -16,92 +17,41 @@ const Categories = () => {
         })
         .catch((e => console.log(e)))
     }, [])
-
-    // const categoryIndex = () => {
-    //     for (i = 0, i <= (categories.length), i++) {
-    //         return (
-    //             "<a>{categories[i]}/a>"
-    //         );
-    //     };
-
-    
-  return (
-    <div className="mainContainer">
-        <section className='product-categories'>
-            <div className="intialLabel">
-                <h2>
-                    <span></span>
-                    <span>
-                        Our Product Categories
-                    </span>
-                    <span></span>
-                </h2>
-            </div>
-            <div className="mainTile">
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[0]}
-                        </div>
-                        <div className="categoryImg">
-                            
-                        </div>
+  
+    const changeCateg = categories.map((category) => {
+        return (
+            <Link to={`/products`}>
+                <div className="categoryBox">
+                    <div className="categoryName">
+                        {category}
                     </div>
-                </a>
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[1]}
-                        </div>
-                        <div className="categoryImg">
-
-                        </div>
+                    <div className="categoryImg"> 
                     </div>
-                </a>
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[2]}
-                        </div>
-                        <div className="categoryImg">
+                </div>
+            </Link>
+        )
+    })
 
-                        </div>
-                    </div>
-                </a>
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[3]}
-                        </div>
-                        <div className="categoryImg">
-
-                        </div>
-                    </div>
-                </a>
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[0]}
-                        </div>
-                        <div className="categoryImg">
-
-                        </div>
-                    </div>
-                </a>
-                <a href="http://">
-                    <div className="categoryBox">
-                        <div className="categoryName">
-                            {categories[1]}
-                        </div>
-                        <div className="categoryImg">
-
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
-  )
+    return (
+        <div className="mainContainer">
+            <section className='product-categories'>
+                <div className="intialLabel">
+                    <h2>
+                        <span></span>
+                        <span>
+                            Our Product Categories
+                        </span>
+                        <span></span>
+                    </h2>
+                </div>
+                <div className="mainTile">
+                    {changeCateg}
+                    {changeCateg}
+                    {changeCateg}
+                </div>
+            </section>
+        </div>
+    )
 }
 
 export default Categories

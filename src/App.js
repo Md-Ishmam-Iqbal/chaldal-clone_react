@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Head from "./components/Head";
+import Helmet from "./components/Helmet";
 
 const App = () => {
   return (
     <div>
-      <Head />
-      <Navbar />
+      <Helmet />
       <Home />
     </div>
   );

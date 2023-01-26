@@ -20,6 +20,7 @@ const Products = () => {
         })
         .catch((e) => console.log(e))
     }, []);
+
     return (
         <main>
             <Grid container justify="center">

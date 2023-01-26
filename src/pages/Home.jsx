@@ -1,10 +1,11 @@
 import React from 'react'
-import Products from "./Products"
-import Categories from '../components/Categories'
+import Helmet from '../components/Helmet'
+import { Outlet } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
+      <Helmet />
       <div>
         <h1>
           Groceries delivered in 30 minutes
@@ -14,7 +15,7 @@ const Home = () => {
       <h2>Ad</h2>
       <h2>Ad</h2>
       <div>
-        <Categories />
+        <Outlet />
       </div>
       <div>
         <h1>How to order from Chaldal?</h1>
