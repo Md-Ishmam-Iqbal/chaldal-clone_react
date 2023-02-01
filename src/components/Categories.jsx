@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-
 const Categories = () => {
     const [categories, setCategories] = useState([])
 
@@ -12,15 +11,16 @@ const Categories = () => {
             url: "https://fakestoreapi.com/products/categories"
         })
         .then((res) => {
-            console.log(res.data)
             setCategories(res.data)
         })
         .catch((e => console.log(e)))
     }, [])
   
-    const changeCateg = categories.map((category) => {
+    const changeCateg = categories.map((category, index) => {
+        const link = "/products" // `/${category}`
         return (
-            <Link to={`/products`}>
+            <div>
+            <Link to={link}>
                 <div className="categoryBox">
                     <div className="categoryName">
                         {category}
@@ -29,6 +29,25 @@ const Categories = () => {
                     </div>
                 </div>
             </Link>
+            <Link to={link}>
+                <div className="categoryBox">
+                    <div className="categoryName">
+                        {category}
+                    </div>
+                    <div className="categoryImg"> 
+                    </div>
+                </div>
+            </Link>
+            <Link to={link}>
+                <div className="categoryBox">
+                    <div className="categoryName">
+                        {category}
+                    </div>
+                    <div className="categoryImg"> 
+                    </div>
+                </div>
+            </Link>
+            </div>
         )
     })
 
@@ -45,8 +64,6 @@ const Categories = () => {
                     </h2>
                 </div>
                 <div className="mainTile">
-                    {changeCateg}
-                    {changeCateg}
                     {changeCateg}
                 </div>
             </section>

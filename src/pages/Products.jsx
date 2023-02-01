@@ -3,11 +3,14 @@ import { Grid } from "@mui/material"
 import Product from '../components/Products/Product/Product'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 
 const Products = () => {
     const [loading, setLoading] = useState(false)
     const [products, setProducts] = useState([])
+
+    const {category} = useParams();
 
     useEffect(() => {
         axios({
@@ -15,11 +18,10 @@ const Products = () => {
             url: "https://fakestoreapi.com/products"
         })
         .then((res)=> {
-            console.log(res.data);
             setProducts(res.data);
         })
         .catch((e) => console.log(e))
-    }, []);
+    }, [category]);
 
     return (
         <main>

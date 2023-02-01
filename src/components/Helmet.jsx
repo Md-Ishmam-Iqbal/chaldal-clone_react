@@ -4,7 +4,7 @@
 import styled from '@emotion/styled'
 import { Home, Search } from '@mui/icons-material'
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Sidebar'
 
 const Section = styled.section`
     background-color: #fdd670;
@@ -153,7 +153,6 @@ const Helmet = () => {
                 </Right>
             </Wrapper>
         </Container>
-        <Navbar />
     </Section>
   )
 }
