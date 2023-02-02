@@ -4,6 +4,7 @@
 import styled from '@emotion/styled'
 import { Home, Search } from '@mui/icons-material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from './Sidebar'
 
 const Section = styled.section`
@@ -59,6 +60,9 @@ const SearchContainer = styled.div`
     width: 100%;
     background-color: white;
     border-radius: 2%;
+    &:hover{
+        cursor: pointer;
+    }
 `
 
 const Input = styled.input`
@@ -134,13 +138,15 @@ const Helmet = () => {
                             <svg width="25px" height="25px"></svg>
                         </button>
                     </HamburgerMenu>
-                    <LogoContainer>
-                        <img src="https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-187/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=" alt="chaldal logo" />
-                    </LogoContainer>
+                    <Link to='/'>
+                        <LogoContainer>
+                            <img src="https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-187/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=" alt="chaldal logo" />
+                        </LogoContainer>
+                    </Link>
                 </Left>
                 <Center>
                     <SearchContainer>
-                        <Input />
+                        <Input placeholder='Search for products (e.g. eggs, milk, potato)'/>
                         <Search />
                     </SearchContainer>    
                 </Center>

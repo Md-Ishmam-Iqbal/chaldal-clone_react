@@ -16,37 +16,37 @@ const Categories = () => {
         .catch((e => console.log(e)))
     }, [])
   
-    const changeCateg = categories.map((category, index) => {
-        const link = "/products" // `/${category}`
+    const handleCategory = categories.map((category, index) => {
+        const link = `/${category}`
         return (
             <div>
-            <Link to={link}>
-                <div className="categoryBox">
-                    <div className="categoryName">
-                        {category}
+                <Link to={link}>
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {category}
+                        </div>
+                        <div className="categoryImg"> 
+                        </div>
                     </div>
-                    <div className="categoryImg"> 
+                </Link>
+                <Link to={link}>
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {category}
+                        </div>
+                        <div className="categoryImg"> 
+                        </div>
                     </div>
-                </div>
-            </Link>
-            <Link to={link}>
-                <div className="categoryBox">
-                    <div className="categoryName">
-                        {category}
+                </Link>
+                <Link to={link}>
+                    <div className="categoryBox">
+                        <div className="categoryName">
+                            {category}
+                        </div>
+                        <div className="categoryImg"> 
+                        </div>
                     </div>
-                    <div className="categoryImg"> 
-                    </div>
-                </div>
-            </Link>
-            <Link to={link}>
-                <div className="categoryBox">
-                    <div className="categoryName">
-                        {category}
-                    </div>
-                    <div className="categoryImg"> 
-                    </div>
-                </div>
-            </Link>
+                </Link>
             </div>
         )
     })
@@ -64,7 +64,7 @@ const Categories = () => {
                     </h2>
                 </div>
                 <div className="mainTile">
-                    {changeCateg}
+                    {handleCategory}
                 </div>
             </section>
         </div>

@@ -5,21 +5,14 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import Categories from "./components/Categories";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    children: [
-      {
-        path: "/",
-        element: <Categories />,
-      },
-    ],
   },
   {
-    path: "/products",
+    path: "/:category",
     element: <Products />,
   },
 ]);
