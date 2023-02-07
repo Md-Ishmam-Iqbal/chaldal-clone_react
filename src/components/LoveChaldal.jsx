@@ -3,7 +3,7 @@ import React from 'react'
 const LoveChaldal = () => {
   return (
     <section id="love-chaldal">
-        <div className="initialLabel">
+        <div className="initialLabel" id='illc'>
           <h2>
             <span>
               "Why People heart Chaldal"

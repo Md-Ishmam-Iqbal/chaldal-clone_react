@@ -5,12 +5,7 @@ import styled from '@emotion/styled'
 import { Home, Search } from '@mui/icons-material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from './Sidebar'
-
-const Section = styled.section`
-    background-color: #fdd670;
-    height: 55px;
-`
+import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
 
 const Container = styled.div`
     background-color: #fdd670;
@@ -25,23 +20,13 @@ const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+    z-index: 98;
 `
-
-const HamburgerMenu = styled.span`
-    border: 0;
-    background: 0 0;
-    float: left;
-    padding: 10px;
-    margin-left: 10px;
-    height: auto;
-    outline: 0;
-    border-radius: 2px
-    `
 
 const LogoContainer = styled.div`
     background-image: url("https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-187/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=");
     background-repeat: no-repeat;
-    height: 55px;
+    height: auto;
     width: 154px;
     color: inherit;
     cursor: pointer;
@@ -127,40 +112,34 @@ const SignIn = styled.button`
     }
 `
 
-const Helmet = () => {
+const Navbar = () => {
   return (
-    <Section>
-        <Container>
-            <Wrapper>
-                <Left>
-                    <HamburgerMenu>
-                        <button>
-                            <svg width="25px" height="25px"></svg>
-                        </button>
-                    </HamburgerMenu>
-                    <Link to='/'>
-                        <LogoContainer>
-                            <img src="https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-187/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=" alt="chaldal logo" />
-                        </LogoContainer>
-                    </Link>
-                </Left>
-                <Center>
-                    <SearchContainer>
-                        <Input placeholder='Search for products (e.g. eggs, milk, potato)'/>
-                        <Search />
-                    </SearchContainer>    
-                </Center>
-                <Right>
-                    <Location>
-                        <Home/>
-                        Dhaka
-                    </Location>
-                    <SignIn>Sign in</SignIn>
-                </Right>
-            </Wrapper>
-        </Container>
-    </Section>
+    <Container>
+        <Wrapper>
+            <Left>
+                <HamburgerMenu />
+                <Link to='/'>
+                    <LogoContainer>
+                        <img src="https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-187/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=" alt="chaldal logo" />
+                    </LogoContainer>
+                </Link>
+            </Left>
+            <Center>
+                <SearchContainer>
+                    <Input placeholder='Search for products (e.g. eggs, milk, potato)'/>
+                    <Search />
+                </SearchContainer>    
+            </Center>
+            <Right>
+                <Location>
+                    <Home/>
+                    Dhaka
+                </Location>
+                <SignIn>Sign in</SignIn>
+            </Right>
+        </Wrapper>
+    </Container>
   )
 }
 
-export default Helmet
+export default Navbar

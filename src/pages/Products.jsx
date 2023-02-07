@@ -4,9 +4,7 @@ import Product from '../components/Products/Product/Product'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Helmet from '../components/Helmet'
-import { ContactPageSharp } from '@mui/icons-material'
-
+import Helmet from '../components/Navbar'
 
 const Products = () => {
     // const [loading, setLoading] = useState(false)

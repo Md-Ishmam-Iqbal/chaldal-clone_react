@@ -3,6 +3,43 @@ html {
     background: #fff;
 }
 
+blockquote,
+body,
+code,
+dd,
+div,
+dl,
+dt,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+
 body {    
     font-family: segoe ui, Helvetica, droid sans, Arial, lucida grande, tahoma, verdana, arial, sans-serif;
     font-size: 12px;
@@ -23,31 +60,6 @@ p {
 
 section {
     display: block;
-}
-
-div {
-    display: block;
-}
-
-
-.product-categories {
-    margin-bottom: 40px
-}
-
-.initialLabel {
-    display: table;
-    margin: 0 auto 20px;
-    width: 100%;
-    padding-top: 0;
-    text-align: center;
-    margin-bottom: 0;    
-}
-
-span {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 button {
@@ -74,33 +86,8 @@ h2 {
     font-weight: bold;
 }
 
-
-
-
-.mainContainer {
-    max-width: 1170px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-.initialLabel h2 {
-    color: rgba(0, 0, 0, .95);
-    font-weight: 300;
-    padding-top: 0;
-    margin-bottom: 20px;
-    display: flex;
-    /* align-items: center;
-    justify-content: space-between; */
-}
-
-.mainTile a {
-    text-decoration: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-indent: initial;
+div {
+    display: block;
 }
 
 tbody {
@@ -122,6 +109,10 @@ td {
     height: 40px;
 }
 
+h2 {
+    font-size: 24px;
+}
+
 
 * {
     padding: 0;
@@ -131,14 +122,48 @@ td {
     -webkit-tap-highlight-color: transparent;
 }
 
-user agent stylesheet svg:not(:root) {
-    overflow-clip-margin: content-box;
-    overflow: hidden;
+span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-blockquote, body, code, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
-    margin: 0;
-    padding: 0;
+
+.componentsContainer {
+    position: relative;
+}
+
+.mainContainer {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+    overflow-y: auto;
+}
+
+.product-categories {
+    margin-bottom: 40px
+}
+
+.intialLabel {
+    display: table;
+    margin: 0 auto 20px;
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+}
+
+.intialLabel>h2 {
+    color: rgba(0, 0, 0, .95);
+    font-weight: 300;
+    padding-top: 0;
+    margin-bottom: 20px;
+    /* align-items: center;
+    justify-content: space-between; */
+}
+
+.mainTile a {
+    text-decoration: none;
 }
 
 .head {
@@ -157,12 +182,12 @@ blockquote, body, code, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li
     margin-right: auto;
 }
 
-.searchBarContainer{
+.searchBarContainer {
     margin: 0 auto;
     display: table;
 }
 
-.searchBarText{
+.searchBarText {
     color: #000;
     font-size: 40px;
     font-weight: 700;
@@ -260,16 +285,57 @@ blockquote, body, code, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li
     text-transform: capitalize;
 }
 
+
+
+
 #how-to-order-chaldal {
     max-width: 1000px;
     margin: auto;
     padding: 0 15px;
 }
 
-.initialLabel {
-    display: table;
-    margin: 0 auto 20px;
+
+.how-to-slider {
+    margin-bottom: 40px;
+}
+
+.imageCarousel{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 42%;
+    height: 100%;
     width: 100%;
-    padding-top: 0;
-    text-align: center;
+}
+
+.banner-carousel-container {
+    position: absolute;
+    height: 100%;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    display: inline-block;
+    height: 250px;
+    width: 100%;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat
+}
+
+.banner-slide1 {
+    width: calc(100%/2);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjbf3VrT1yYFVYIuiPnsijOsETc--lIvrpYA&usqp=CAU);
+}
+
+.banner-slide2 {
+    width: calc(100%/2);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xTyMYqkfnXeSxDEkh98GAdEkLSK9irLItQ&usqp=CAU);
+}
+
+.banner-slide3 {
+    width: calc(100%/2);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLywYeJ8VBlKoWdffNV0Abvbd9Dr3KvxU52g&usqp=CAU);
 }
