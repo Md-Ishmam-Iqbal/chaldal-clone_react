@@ -35,10 +35,14 @@ const HamburgerMenu = () => {
   
   const toggleOpen = () => {
     document.getElementById("sideBar").style.transform = `translateX(0em)`
+    document.getElementById("everythingElseWrapper").style.marginLeft = `220px`
+    document.getElementById("everythingElseWrapper").style.transition = `all 300ms ease-in-out`
+
   }
   
   const toggleClose = () => {
     document.getElementById("sideBar").style.transform = `translateX(-20em)`
+    document.getElementById("everythingElseWrapper").style.marginLeft = `0px`
   }
   
   const toggleMenu = () => {
@@ -59,7 +63,6 @@ const HamburgerMenu = () => {
             <rect y="75" width="100" height="7"></rect>
           </svg>
         </HamburgerButton>
-        <SideBar />
       </HamburgerMenuContainer>
   )
 }

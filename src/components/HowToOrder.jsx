@@ -1,3 +1,5 @@
+// Carousel inspirtaion: https://codesandbox.io/s/21o46mkwnr?file=/src/index.js
+
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
 
@@ -15,7 +17,7 @@ const HowToOrder = () => {
           <h2>
             <span></span>
             <span>
-              How to order from Chaldal?
+              Kar tel? Tartel
             </span>
             <span></span>
           </h2>
@@ -25,9 +27,9 @@ const HowToOrder = () => {
             <div className="banner-carousel-container transition">
               <Carousel slides={slides}>
                 {/* {slides.map(slide => <span key={slides.id}>{slides.title}</span>)} */}
-                  <div className="banner-slide1 slide" key={slides.id}>{slides.title}</div>
-                  <div className="banner-slide2 slide" key={slides.id}>{slides.title}</div>
-                  <div className="banner-slide3 slide" key={slides.id}>{slides.title}</div>
+                  <div className="banner-slide1 slide" key={slides.id}></div>
+                  <div className="banner-slide2 slide" key={slides.id}></div>
+                  <div className="banner-slide3 slide" key={slides.id}></div>
               </Carousel>
             </div>
             {/* <div className="carousel-controls-wrapper">

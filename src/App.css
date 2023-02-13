@@ -169,7 +169,7 @@ span {
 .head {
     background: url(https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb/1.0.0+Deploy-Release-189/Default/stores/chaldal/components/landingPage2/LandingPage/images/landingBannerTop.png) no-repeat center;
     background-size: cover;
-    height: 325px;
+    height: 350px;
     padding-top: 100px;
 }
 
@@ -287,6 +287,30 @@ span {
 
 
 
+#discount-offers {
+    max-width: 1180px;
+    margin: 20px auto;
+    max-height: 160px;
+}
+
+.discount-offer1 {
+    margin: 0 auto;
+    max-width: 588px;
+    width: 49.9%;
+    float: left;
+}
+.discount-offer2 {
+    margin: 0 auto;
+    max-width: 588px;
+    width: 49.9%;
+    float: right;
+}
+
+#discount-offers>a>div>img {
+    max-height: 160px;
+    width: 100%;
+}
+
 
 #how-to-order-chaldal {
     max-width: 1000px;
@@ -338,4 +362,54 @@ span {
 .banner-slide3 {
     width: calc(100%/2);
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLywYeJ8VBlKoWdffNV0Abvbd9Dr3KvxU52g&usqp=CAU);
+}
+
+.stickyHeader {
+    opacity: .7;
+    cursor: pointer;
+    position: fixed;
+    width: 65px;
+    height: 75px;
+    background: #F5FCEB;
+    right: 0;
+    top: calc(110px + 30%);
+    box-shadow: 0 0 16px -1px rgb(0 0 0 / 75%);
+    display: block;
+    transition: .1s ease-in-out;
+}
+
+.itemCount {
+    height: 50px;
+    background: #55584d;
+    width: 100%;
+}
+
+.itemCountp {
+    color: #fdd670;
+    margin-top: -2px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0;
+}
+
+#sideBar {
+    width: 220px;
+    height: auto;
+    background: #fff;
+    z-index: 90;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-20em);
+    transition: 0.5s;
+    user-select: none;
+    padding: 1em 0 0 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.contentWrapper {
+    height: 9000px;
 }

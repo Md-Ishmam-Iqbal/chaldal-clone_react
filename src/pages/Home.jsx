@@ -7,26 +7,31 @@ import SpecialOffers from '../components/SpecialOffers'
 import LoveChaldal from '../components/LoveChaldal'
 import Feedback from '../components/Feedback'
 import SideBar from '../components/SideBar'
+import DiscountOffers from '../components/DiscountOffers'
+import Cart from '../components/Cart'
 
 const Home = () => {
   return (
-    <div>
-    <div>
-      <Navbar />
-    </div>
+    <main>
+      <div>
+        <Navbar />
+      </div>
       <div>
         <div className='componentsContainer'>
-          {/* <SideBar /> */}
-          <Head />
-          <h1>Ad</h1>
-          <Categories />
-          <HowToOrder />
-          <SpecialOffers />
-          <LoveChaldal />
-          <Feedback />
+          <SideBar />
+          <Cart />
+          <div id='everythingElseWrapper'>
+            <Head />
+            <DiscountOffers />
+            <Categories />
+            <HowToOrder />
+            <SpecialOffers />
+            <LoveChaldal />
+            <Feedback />
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 
